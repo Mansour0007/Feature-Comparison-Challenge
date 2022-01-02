@@ -1,0 +1,155 @@
+:root {
+  --light-gray: #f8f6f6;
+  --blue-color: #2196f3;
+  --red-color: #f44336;
+  --light-green: #009688;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--light-gray);
+}
+.page {
+  width: 850px;
+  height: 600px;
+  margin: 150px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.container {
+  width: 400px;
+  height: 680px;
+  margin: 30px auto;
+  /* border: 2px solid black; */
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+.title {
+  width: 100%;
+  height: 50px;
+  padding: 15px 10px;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+.clr-red {
+  background-color: var(--red-color);
+}
+.clr-blue {
+  background-color: var(--blue-color);
+}
+.items {
+  width: 100%;
+  height: 630px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.items-13 {
+  padding: 10px 15px 15px 30px;
+  border-bottom: 1px solid rgb(235, 225, 225);
+  position: relative;
+}
+.border-none {
+  border-bottom: none;
+}
+.check {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 372px;
+  top: 12px;
+  background-color: var(--light-green);
+  border-radius: 50px;
+}
+.check::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(40deg);
+}
+.quest {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 10px;
+  background-color: gray;
+  border-radius: 50px;
+}
+.quest::after {
+  content: "\003F";
+  position: absolute;
+  width: 5px;
+  height: 9px;
+  top: 0;
+  right: 9px;
+  color: #fff;
+}
+.check-red {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 372px;
+  top: 12px;
+  background-color: var(--red-color);
+  border-radius: 50px;
+}
+.check-red::after {
+  content: "\00D7";
+  position: absolute;
+  color: #009688;
+  width: 5px;
+  height: 11px;
+  top: -1px;
+  right: 7px;
+  color: #fff;
+}
+
+/* this code below was copied not fully understanding it */
+.save-container {
+  position: absolute;
+  top: -110px;
+  right: 5px;
+}
+.save-container .save {
+  background-color: var(--blue-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 130px;
+  padding: 13px;
+  margin-right: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.save::before,
+.save::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--blue-color);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.save::after {
+  transform: skewX(37deg) translate(20px);
+}
+.save::before {
+  transform: skewX(-37deg) translate(20px);
+}
